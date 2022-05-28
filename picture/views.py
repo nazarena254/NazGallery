@@ -13,7 +13,7 @@ def welcome(request):
     southafrica=Picture.filter_by_location(location='SouthAfrica')
     return render(request, 'all-pictures/index.html', {'pictures':pictures,'Kenya':kenya,'Ethiopia':ethiopia,'Rwanda':rwanda,'SouthAfrica':southafrica})
 
-def search_reaults():
+def search_results():
     if 'picture' in request.GET and request.GET["picture"]:
         search_term=request.GET.get("picture")
         searched_pictures=Picture.search_by_category(search_term)
