@@ -19,4 +19,20 @@ class Location(models.Model):
         return self.location             
 
 class Category(models.Model):
+    category=models.CharField(max_length=100)
+    def save_category(self):
+        self.save()
+    def delete_category(self):
+        self.save_category()
+        self.delete()
+    def get_all(self):
+        self.save_category()
+    @classmethod
+    def update_category(cls, id, category):
+        category1=cls.objects.filter(id=id).update(category=category)
+        return category1
+
+    def __str__(self):
+        return self.category    
+
     pass
