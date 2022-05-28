@@ -9,7 +9,7 @@
     {% if title %}
     <title>NazGallery -- {{title}}</title>
     {%else %}
-    <title>GalleryZilla</title>
+    <title>NazGallery</title>
     {%endif%} {% block styles%}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!--bootstrap  css cdn-->
@@ -25,7 +25,11 @@
 </head>
 
 <body>
-    {% include "navbar.html" %} {%block content %} {%endblock%} {% block scripts %}
+    {% include "navbar.html" %} 
+
+    {%block content %} {%endblock%}
+     
+    {% block scripts %}
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--js popper cdn-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

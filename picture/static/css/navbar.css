@@ -1,0 +1,18 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    /* 
+    font-family: 'Acme', sans-serif;
+    font-family: 'Fredoka One', cursive; 
+       */
+}
+nav {
+    box-shadow: 0 0 20px 0 rgb(115, 185, 10) !important;
+    font-family: 'display';
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: bold !important;
+}
