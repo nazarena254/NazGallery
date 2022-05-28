@@ -64,4 +64,47 @@ class CategoryTestClass(TestCase):
         self.food.save_category()
         self.food.update_category(self.food.id,'Fashion')
         fashion=Category.objects.get(category='Fashion')
-        self.assertEqual(fashion.category,'Fashion')        
+        self.assertEqual(fashion.category,'Fashion')
+
+class PictureTestClass(TestCase):
+    def setUp(self):
+        self.kenya=Location(location='Kenya')
+        self.kenya.save_location()
+        self.food=Category(category='Food')
+        self.food.save_category()
+        self.new_picture=Picture(title='WaterFalls',description='A waterfall',location=self.kenya,category=self.food)
+        self.new_picture.save()
+    def tearDown(self):
+        Picture.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
+
+    def test_picture_instance(self):
+        self.assertTrue(isinstance(self.new_picture,Picture))
+
+    def test_save_picture(self):
+        self.new_picture.save_image()
+        images=Picture.objects.all()
+        self.assertTrue(len(images)>0)
+    def test_delete_picture(self):
+        self.new_picture.delete_image()
+        images=Picture.objects.all()
+        self.assertTrue(len(images)==0)
+
+    def test_update_image(self):
+        self.new_picture.save_image()
+        self.new_picture.update_image(self.new_picture.id,image='media/test.png')
+        image_new=Picture.objects.get(image='media/test.png')
+        self.assertEqual(image_new.image,'media/test.png')
+    def test_get_image_by_id(self):
+        self.new_picture.save_image()
+        image_found=self.new_picture.get_image_by_id(self.new_picture.id)
+        self.assertTrue(len(image_found)>0)
+    def test_filter_by_location(self):
+        self.new_picture.save_image()
+        found_images = self.new_picture.filter_by_location(location='Kenya')
+        self.assertTrue(len(found_images) == 1)
+    def test_search_image(self):
+        self.new_picture.save_image()
+        searched_image=self.new_picture.search_by_category(search_term='food')
+        self.assertTrue(len(searched_image)==1)                
