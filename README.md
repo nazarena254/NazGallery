@@ -1,10 +1,17 @@
-# NazGallery
+# #NazGallery
 
 ## Author
 Nazarena Wambura.</br>
 [Github](https://github.com/nazarena254)
 
-# Description
+### Homepage
+![nazzblog](./picture/static/images/nazgallery.png)
+### Wireframe sample
+![nazzblog](./picture/static/images/wirefrm.jpeg)
+### Admin panel
+![nazzblog](./picture/static/images/djangoAdmin.png)
+
+## Description
 This is a Django web application. It is a photo gallery  where a user can view different photos based on locations they were taken, search the photos by categories they belong to and copy the photo link to share with others.The admin is the one who populates the database.
 
 
@@ -12,8 +19,7 @@ This is a Django web application. It is a photo gallery  where a user can view d
 1. View different photos that interest them
 2. Click a single image to expand it and view the details of that photo
 3. Search for different categories
-4. Copy a link to the photo to share with my friends.
-5. View photos based on the location they were taken.
+4. View photos based on the location they were taken.
 
 
 ## Behaviour Driven Development (BDD)
@@ -65,9 +71,15 @@ This is a Django web application. It is a photo gallery  where a user can view d
 1. Run main apllication
    * python3 manage.py runserver
 
-2. Run tests
-    
+2. Run tests    
    * python3.6 manage.py test picture
+
+###
+1. Creating Admin Locally
+    python manage.py createsuperuser. Then set username, email & password
+
+2. Creating Django Admin   
+     heroku run python manage.py createsuperuser. Then set username, email & password
 
 ## Technologies Used
 * Python3.6
