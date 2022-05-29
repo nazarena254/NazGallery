@@ -82,5 +82,5 @@ For any further inquiries, bugs, contributions or comments, reach me at:<br>
 Email:<nancyngunjiri1@gmail.com>
 
 ### License
-[MIT License]()
+[MIT License](https://github.com/nazarena254/NazGallery/blob/master/license)
 Copyright (c) 2021 **Nazarena Wambura**
