@@ -38,6 +38,7 @@ class Category(models.Model):
 
 class Picture(models.Model):
     image=models.ImageField(upload_to='pictures/')
+    img_url=models.URLField(null=True)
     title=models.CharField(max_length=100)
     description=models.TextField()
     location=models.ForeignKey('Location', on_delete=models.CASCADE)
