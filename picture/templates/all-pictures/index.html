@@ -1,6 +1,7 @@
 {%extends 'base.html'%}
  {%block content %}
  {{block.super}}
+ <!--block super is used when you want base content and this files content to be both displayed-->
 <div id="tabsDetails">
     <div class="navtabs">
         <ul class="nav nav-pills nav-justified nav-fill" role="tablist" id="navtabs">
@@ -27,7 +28,7 @@
             <div class="tab-pane active" id="all">
                 <div class="myCards">
                     {%for picture in pictures%}
-                    <div class="card" style="width: 26rem;" data-toggle="modal" data-target="#{{picture.id}}">
+                    <div class="card" style="width: 22rem;" data-toggle="modal" data-target="#{{picture.id}}">
                         <div class="card-header">
                             <div class="card-image">
                                 <img src="{{picture.image.url}}">
@@ -60,7 +61,7 @@
                                 </div>
                                 <div class="modal-footer justify-content-start">
                                     <label class="modalBody">Copy share link</label>
-                                    <input class="form-control " type="text " value="https://galleryzilla.herokuapp.com{{picture.image.url}} " id="{{picture.id}}.url">
+                                    <input class="form-control " type="text " value="https://nazgallery.herokuapp.com{{picture.image.url}} " id="{{picture.id}}.url">
                                     <button class="btn btn-success btn-sm copy " id=url{picture.id} onclick="myCopyFunction('{{picture.id}}.url') "><i
                                             class="fas fa-copy " style="font-size:12px; "></i></button>
                                 </div>
@@ -110,9 +111,9 @@
                                 </div>
                                 <div class="modal-footer justify-content-start">
                                     <label class="modalBody">Copy share link</label>
-                                    <input class="form-control " type="text " value="https://galleryzilla.herokuapp.com{{picture.image.url}} " id="ken{{picture.id}}.url">
-                                    <button class="btn btn-success btn-sm copy " onclick="myCopyFunction('ken{{picture.id}}.url') "><i
-                                            class="fas fa-copy " style="font-size:12px; "></i></button>
+                                    <input class="form-control " type="text " value="https://nazgallery.herokuapp.com{{picture.image.url}} " id="ken{{picture.id}}.url">
+                                    <button class="btn btn-success btn-sm copy " onclick="myCopyFunction('ken{{picture.id}}.url') ">
+                                    <i class="fas fa-copy" style="font-size:12px; "></i></button>
                                 </div>
 
                             </div>
@@ -235,7 +236,7 @@
                         </div>
 
                     </div>
-                    <div class="modal fade " id="japanPics{{picture.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal fade " id="southafricaPics{{picture.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-full" role="document">
                             <div class="modal-content modalcard">
                                 <div class="modal-header">

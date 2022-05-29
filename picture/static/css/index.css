@@ -3,12 +3,13 @@ body{
     /* 
     font-family: 'Acme', sans-serif;
     font-family: 'Fredoka One', cursive;
-    background-image: url(../images/background.jpg);
+     */
+    background-image: url(https://images.unsplash.com/photo-1541664342457-74ef081fb818?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
-       */
+      
 }
 
 .navtabs {
@@ -25,12 +26,12 @@ body{
 }
 
 .nav-pills>li>a.active {
-    background-color: rgba(108, 158, 32, 0.8) !important;
+    background-color: rgb(95,216,247,0.8);
     border: none;
 }
 
 a.nav-link:hover {
-    background-color: whitesmoke !important;
+    background-color: whitesmoke ;
 }
 
 a.nav-link {
@@ -45,7 +46,7 @@ a.nav-link {
 }
 img {
     width: 100%;
-    height: 400px;
+    height: 300px;
     border-radius: 3%;
 }
 .card-header {
@@ -57,31 +58,31 @@ img {
 .modal-full {
     min-width: 80%;
     margin: 10%;
-    margin-top: 4% !important;
+    margin-top: 4% ;
 }
 .modal-full .modal-content {
     min-height: 30vh;
 }
 .img-fluid {
-    width: 450px !important;
-    height: 400px !important;
+    width: 450px ;
+    height: 300px ;
 }
 .modal-footer input {
     padding: 0;
     margin: 0;
-    width: 40% !important;
+    width: 40% ;
 }
 .modal-footer {
     padding: 0;
     margin: 0;
-    margin-left: 30% !important;
+    margin-left: 30% ;
 }
 label {
     padding: 0;
     margin: 0;
 }
 hr {
-    border: 2px solid rgba(103, 165, 9, 0.8);
+    border: 2px solid rgb(95,216,247,0.8);
 }
 .myCardsSearch {
     display: flex;
@@ -89,7 +90,7 @@ hr {
     justify-content: space-around;
 }
 .modal-title {
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: bold;
 }
 .modalBody {

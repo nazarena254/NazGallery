@@ -1,8 +1,7 @@
-from email import message
-from urllib import request
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, HttpResponse
 from .models import Picture,Location,Category
+# from django.http import HttpResponse
+
 
 # Create your views here.
 def welcome(request):
@@ -13,7 +12,7 @@ def welcome(request):
     southafrica=Picture.filter_by_location(location='SouthAfrica')
     return render(request, 'all-pictures/index.html', {'pictures':pictures,'kenya':kenya,'ethiopia':ethiopia,'rwanda':rwanda,'southafrica':southafrica})
 
-def search_results():
+def search_results(request):
     if 'picture' in request.GET and request.GET["picture"]:
         search_term=request.GET.get("picture")
         searched_pictures=Picture.search_by_category(search_term)
