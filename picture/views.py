@@ -2,7 +2,6 @@ from django.shortcuts import render, HttpResponse
 from .models import Picture,Location,Category
 # from django.http import HttpResponse
 
-
 # Create your views here.
 def welcome(request):
     pictures=Picture.objects.all()
