@@ -4,14 +4,13 @@ body{
     font-family: 'Acme', sans-serif;
     font-family: 'Fredoka One', cursive;
      */
-    background-image: url(https://images.unsplash.com/photo-1541664342457-74ef081fb818?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60);
+    background-image: url(https://images.unsplash.com/photo-1541664342457-74ef081fb818?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
       
 }
-
 .navtabs {
     margin-top: 3%;
     margin-left: 3%;
@@ -26,7 +25,7 @@ body{
 }
 
 .nav-pills>li>a.active {
-    background-color: rgb(95,216,247,0.8);
+    background-color: rgba(32, 87, 240, 0.8);
     border: none;
 }
 
@@ -37,7 +36,6 @@ a.nav-link:hover {
 a.nav-link {
     padding-left: 10%;
 }
-
 .myCards {
     margin-top: 5%;
     display: flex;
@@ -82,7 +80,7 @@ label {
     margin: 0;
 }
 hr {
-    border: 2px solid rgb(95,216,247,0.8);
+    border: 2px solid rgba(2, 27, 136, 0.8);
 }
 .myCardsSearch {
     display: flex;

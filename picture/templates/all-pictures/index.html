@@ -2,11 +2,12 @@
  {%block content %}
  {{block.super}}
  <!--block super is used when you want base content and this files content to be both displayed-->
-<div id="tabsDetails">
+
+ <div id="tabsDetails">
     <div class="navtabs">
         <ul class="nav nav-pills nav-justified nav-fill" role="tablist" id="navtabs">
             <li class="nav-item tabsIndex ">
-                <a id="home-tab" class="nav-link active" data-toggle="tab" href="#all"><strong>All Pictures</strong> </a>
+                <a id="home-tab" class="nav-link active" data-toggle="tab" href="#all"><strong>All Images</strong> </a>
             </li>
             <li class="nav-item tabsIndex">
                 <a class="nav-link" id="kenya-tab" data-toggle="tab" href="#kenya">Kenya</a>
@@ -22,9 +23,25 @@
             </li>
         </ul>
         <hr>
+
+        <div class="container py-5 myherosection">
+            <div class="row">
+                <div class="col-md-6 mt-5 hero-left" >
+                    <h1 class=" mt-5 text-primary"><b>Gallery Corner</b></h1><br>
+                    <h4 class="ml-4"> <b> Hey! Enjoy <br> View Beautiful  <br> & Amazing Photos</b></br></h4><br>
+                    <p><b>From fashion, clothes, nature, food and so many caegories.</b></p>
+                </div>
+                
+                <div class="col-md-4 " style=" margin-right: 10px; background-color: rgb(4, 88, 214); border-radius: 0% 100% 1% 99% / 5% 2% 98% 95% ; ">
+                    <img  class="rounded-circle mx-2 my-2" height="200px" width="200px" src="https://images.unsplash.com/photo-1597633125184-9fd7e54f0ff7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
         <div class="tab-content">
 
-            <!-- tab for all pictures -->
+            <!-- tab for all pictures -->         
             <div class="tab-pane active" id="all">
                 <div class="myCards">
                     {%for picture in pictures%}
