@@ -1,4 +1,4 @@
-# #NazGallery
+## NazGallery
 
 ## Author
 Nazarena Wambura.</br>
